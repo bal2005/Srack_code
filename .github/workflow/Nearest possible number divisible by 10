@@ -1,0 +1,15 @@
+# Get input from the user
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
+
+# Calculate the nearest number that is divisible by 10
+nearest1 = (number1 // 10) * 10
+nearest2 = (number2 // 10) * 10
+
+# Determine which of the two nearest numbers is closer to the original numbers
+if abs(number1 - nearest1) < abs(number2 - nearest2):
+    nearest_number = nearest1
+else:
+    nearest_number = nearest2
+
+print("The nearest number divisible by 10 is:", nearest_number)
