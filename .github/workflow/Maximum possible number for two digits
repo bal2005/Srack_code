@@ -1,0 +1,17 @@
+two_digit_number = input("Enter a two-digit number: ")
+
+# Check if the input is valid (a two-digit number)
+if len(two_digit_number) != 2 or not two_digit_number.isdigit():
+    print("Invalid input. Please enter a valid two-digit number.")
+else:
+    # Convert the input to an integer
+    num = int(two_digit_number)
+
+    # Extract the two digits
+    digit1 = num // 10
+    digit2 = num % 10
+
+    # Find the highest possible number
+    highest_number = max(digit1, digit2) * 10 + min(digit1, digit2)
+
+    print("The highest possible number is:", highest_number)
