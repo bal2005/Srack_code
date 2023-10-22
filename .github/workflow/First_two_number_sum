@@ -1,0 +1,18 @@
+# Get input from the user
+number = input("Enter an integer: ")
+
+# Check if the input is a valid integer
+if not number.isdigit():
+    print("Invalid input. Please enter a valid integer.")
+else:
+    # Convert the input to an integer
+    num = int(number)
+
+    # Calculate the sum of the first two digits
+    if len(number) >= 2:
+        first_digit = num // 10
+        second_digit = num % 10
+        sum_of_first_two_digits = first_digit + second_digit
+        print("The sum of the first two digits is:", sum_of_first_two_digits)
+    else:
+        print("The input has fewer than two digits, so the sum is not applicable.")
